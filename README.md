@@ -1,9 +1,14 @@
 # CNxD
 Learning an Accurate Cutset Networks via Compilation
+
 Running environment: Python 2.7
+
 ----------------------------------------HELP----------------------------------------------
+
 -p                The program name
+
 -dir              The directory of input dataset
+
 -dn               The name of the dataset
 -ncomp            The number of components in mixture or bag
 -max_iter         The maximun iterations to stop training (only used in mt)
