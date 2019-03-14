@@ -1,3 +1,10 @@
+The software contains implementations of six algorithms:
+(1) CLTs: Chow-Liu Trees (Chow and Liu, 1968)
+(2) MTs: Mixtures of Trees (Algorithm by Meila and Jordan, 2000)
+(3) CNDs: Cutset networks learned from data (Algorithm by Rahman et al. 2014)
+(4) BCNs: Bags of Cutset networks (Algorithm by Rahman et al. 2016, Di Mauro et al. 2015)
+(5) CNxDs: Cutset networks via compilation from MTs or BCNs and data (Read the paper in folder Results)
+(6) CNRs: Randomly generated deep CN structures with parameters learned from BCNs or MTs.
 
 ----------------------------------------HELP----------------------------------------------
 -p                The program name
