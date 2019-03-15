@@ -159,7 +159,7 @@ def compute_xmax_mt(mt_module, dataset, x_var, e_var):
 
 
 '''
-    For All types of cutset networks, including CNxD RCN and CN
+    For All types of cutset networks, including CNxD CNR and CNd
     Note: for CN, we don't need the depth, so depth can be any number
 '''
 def main_map_cnet(parms_dict):
@@ -353,7 +353,7 @@ if __name__=="__main__":
         main_map_bcnet()
     elif sys.argv[2] == 'mt':
         main_map_mt()
-    elif sys.argv[2] in ['cn','cnxd','rcn']:
+    elif sys.argv[2] in ['cn','cnxd','cnr']:
         main_map_cnet()    
     else:
         print ('**** ERROR: invalid module type ****')
