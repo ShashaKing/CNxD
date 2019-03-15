@@ -54,7 +54,7 @@ def main():
         main_clt(parms_dict)
     elif parms_dict['p'] == 'mt':
         main_mixture_clt(parms_dict)
-    elif parms_dict['p'] == 'cnd':
+    elif parms_dict['p'] == 'cn':
         main_cutset_opt(parms_dict)
     elif parms_dict['p'] == 'cnxd':
         main_cnxd(parms_dict)
@@ -66,7 +66,7 @@ def main():
         else:
             main_cnr_structure(parms_dict)
     elif parms_dict['p'] == 'map':
-        if parms_dict['t'] in ['cnxd','cnr','cnd']:
+        if parms_dict['t'] in ['cnxd','cnr','cn']:
             main_map_cnet(parms_dict)
         elif parms_dict['t'] == 'mt':
             main_map_mt(parms_dict)
