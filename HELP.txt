@@ -18,8 +18,8 @@ Results of our experimental study are presented in the folder 'results.'
 -depth            The depth of cutset network
 -min_depth        The minimun depth when training a set of cutset networks
 -max_depth        The maximun depth when training a set of cutset networks
--a                A hyper parameter, used to tune the percentage of data statistic used 
-                    when train CNxd and RCN. 0<=a<=1.0
+-a                A hyper parameter, used to tune the percentage of MAP intractable model
+                     statistic used when train CNxd and RCN. 0<=a<=1.0
 -f                A hyper parameter, adjust a by number_of_records_left / total_records.
                     Now only support 'root', 'linear' and square'
 -sp               The 'OR' nodes selection option.
