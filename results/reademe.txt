@@ -1,12 +1,12 @@
 For the LL score results:
 1) Best Model: results either from MT or BCN, which is better
-2) CN  : Cutset Network learned from Data
-3) CNX : Cutset Network learned from MAP intractable models
-4) CNxD: Cutset Network learned from Compilation
-5) CNR : Cutset Network with random structure and learned parameters
+2) CN  : Cutset Network learned from Data only
+3) CNX : Cutset Network learned from MAP intractable models via compilation only
+4) CNxD: Cutset Network learned from MAP intractable models using compilation and Data
+5) CNR : Cutset Network with random structure and parameters learned from BCNs
 
 For the MAP inference result
 1) BCN: Bags of Cutset Networks
 2) MT: Mixture of chow_liu trees
 3) CN: Cutset Network learned from Data
-4) CNxD: Cutset Network learned from Compilation
+4) CNxD: Cutset Network learned from MAP intractable models using compilation and Data
