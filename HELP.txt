@@ -33,7 +33,7 @@ Results of our experimental study are presented in the folder 'results'.
                     2 means the depht of cnets are choosed seqencially from 1 to 6
 -t                Type
                     'structure' or 'parm' when learning CNR
-                    'cnxd', 'cnd', 'cnr', 'mt', 'bcnet' during MAP inference
+                    'cnxd', 'cn', 'cnr', 'mt', 'bcnet' during MAP inference
 -e                The percentage of evidence variables
 -seq              The index of which set of evidence is used
 -input_dir        The directory of MAP intractable module used in training CNxD or CNR
@@ -63,7 +63,7 @@ Module training examples:
 
 MAP inference examples:
     python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'cnxd' -depth 5 -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/cnxd/' -input_module 'nltcs_5' -output_dir '../map/cnxd/'
-    python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'cn' -depth 5 -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/cnd/' -input_module 'nltcs' -output_dir '../map/cnd/'
+    python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'cn' -depth 5 -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/cn/' -input_module 'nltcs' -output_dir '../map/cn/'
     python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'cnr' -depth 4 -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/cnr/' -input_module 'nltcs_4' -output_dir '../map/cnr/'
     python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'mt' -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/mt/' -input_module 'nltcs_5' -output_dir '../map/mt/'
     python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'bcnet' -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/bcnet/' -input_module 'nltcs' -output_dir '../map/bcnet/'
