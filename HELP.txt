@@ -64,6 +64,6 @@ Module training examples:
 MAP inference examples:
     python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'cnxd' -depth 5 -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/cnxd/' -input_module 'nltcs_5' -output_dir '../map/cnxd/'
     python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'cnd' -depth 5 -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/cnd/' -input_module 'nltcs' -output_dir '../map/cnd/'
-    python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'cnr' -depth 4 -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/rcn/' -input_module 'nltcs_4' -output_dir '../map/cnR/'
+    python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'cnr' -depth 4 -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/cnr/' -input_module 'nltcs_4' -output_dir '../map/cnr/'
     python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'mt' -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/mt/' -input_module 'nltcs_5' -output_dir '../map/mt/'
     python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'bcnet' -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/bcnet/' -input_module 'nltcs' -output_dir '../map/bcnet/'
