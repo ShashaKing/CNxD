@@ -7,7 +7,7 @@ from MIXTURE_CLT import main_mixture_clt
 from CNET_class import main_cutset_opt
 from CNXD import main_cnxd
 from cnet_bag import main_bag_cnet
-from rcn import main_rcn_structure, main_rcn_parm
+from cnr import main_cnr_structure, main_cnr_parm
 from map_inference import main_map_cnet, main_map_mt, main_map_bcnet
 
 
@@ -45,6 +45,7 @@ def main():
         val = sys.argv[2*i+2]
         if ind not in parms_dict.keys():        
             print ('****** ERROR, invalid paramter: ', ind)
+            print ('Please refer HELP.txt to run the program')
             exit()
         else:
             parms_dict[ind] = val
@@ -59,13 +60,13 @@ def main():
         main_cnxd(parms_dict)
     elif parms_dict['p'] == 'bcnet':
         main_bag_cnet(parms_dict)
-    elif parms_dict['p'] == 'rcn':
+    elif parms_dict['p'] == 'cnr':
         if parms_dict['t'] == 'parm':
-            main_rcn_parm(parms_dict)
+            main_cnr_parm(parms_dict)
         else:
-            main_rcn_structure(parms_dict)
+            main_cnr_structure(parms_dict)
     elif parms_dict['p'] == 'map':
-        if parms_dict['t'] in ['cnxd','rcn','cnd']:
+        if parms_dict['t'] in ['cnxd','cnr','cnd']:
             main_map_cnet(parms_dict)
         elif parms_dict['t'] == 'mt':
             main_map_mt(parms_dict)
@@ -73,9 +74,12 @@ def main():
             main_map_bcnet(parms_dict)
         else:
             print ('****** ERROR, invalid module name in MAP inference: ', parms_dict['t'])
+            print ('Please refer HELP.txt to run the program')
+            exit()
         
     else:
         print ('****** ERROR, invalid program: ', parms_dict['p'])
+        print ('Please refer HELP.txt to run the program')
         exit()
         
         
