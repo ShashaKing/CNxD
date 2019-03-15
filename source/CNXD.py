@@ -256,7 +256,7 @@ def main_cnxd(parms_dict):
     
     dataset_dir = parms_dict['dir']
     data_name = parms_dict['dn']
-    lamda = float(parms_dict['a'])
+    lamda = 1.0-float(parms_dict['a'])
     beta_function = parms_dict['f']
     min_depth = int(parms_dict['min_depth'])
     max_depth = int(parms_dict['max_depth']) 
