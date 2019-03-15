@@ -19,7 +19,7 @@ Results of our experimental study are presented in the folder 'results.'
 -min_depth        The minimun depth when training a set of cutset networks
 -max_depth        The maximun depth when training a set of cutset networks
 -a                A hyper parameter, used to tune the percentage of MAP intractable model
-                     statistic used when train CNxd and RCN. 0<=a<=1.0
+                     statistic used when train CNxd and CNR. 0<=a<=1.0
 -f                A hyper parameter, adjust a by number_of_records_left / total_records.
                     Now only support 'root', 'linear' and square'
 -sp               The 'OR' nodes selection option.
@@ -36,7 +36,7 @@ Results of our experimental study are presented in the folder 'results.'
                     'cnxd', 'cnd', 'cnr', 'mt', 'bcnet' during MAP inference
 -e                The percentage of evidence variables
 -seq              The index of which set of evidence is used
--input_dir        The directory of MAP intractable module used in training CNxD or RCN
+-input_dir        The directory of MAP intractable module used in training CNxD or CNR
 -input_module     The MAP intractable module used in training CNxD or CNR
 -output_dir       The output dir to store the trained modules
 -efile            The full path of evidence files
