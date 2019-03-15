@@ -33,11 +33,11 @@ Results of our experimental study are presented in the folder 'results.'
                     2 means the depht of cnets are choosed seqencially from 1 to 6
 -t                Type
                     'structure' or 'parm' when learning RCN
-                    'cnxd', 'cnd', 'rcn', 'mt', 'bcnet' during MAP inference
+                    'cnxd', 'cnd', 'cnr', 'mt', 'bcnet' during MAP inference
 -e                The percentage of evidence variables
 -seq              The index of which set of evidence is used
 -input_dir        The directory of MAP intractable module used in training CNxD or RCN
--input_module     The MAP intractable module used in training CNxD or RCN
+-input_module     The MAP intractable module used in training CNxD or CNR
 -output_dir       The output dir to store the trained modules
 -efile            The full path of evidence files
     
@@ -56,14 +56,14 @@ Module training examples:
     python main.py -p 'cnxd'  -dir   '../dataset/'   -dn   'nltcs'  -a  0.5  -f  'root' -min_depth 1 -max_depth 5  -input_dir '../output/mt/' -input_module 'nltcs_5' -output_dir '../output/cnxd/nltcs/'
 6) Learning Random Cutset Network (RCN): structure is random while parameters are learnt  
     i) Get the structure
-        python main.py -p 'rcn' -dir   '../dataset/'   -dn   'nltcs'   -t 'structure' -min_depth 1 -max_depth 10 -output_dir '../output/rcn/'
+        python main.py -p 'cnr' -dir   '../dataset/'   -dn   'nltcs'   -t 'structure' -min_depth 1 -max_depth 10 -output_dir '../output/cnr/'
     ii) learn parameters
-        python main.py -p 'rcn' -dir   '../dataset/'   -dn   'nltcs'   -t 'parm' -depth 4 -input_dir '../output/mt/' -input_module 'nltcs_5' -output_dir '../output/rcn/'
+        python main.py -p 'cnr' -dir   '../dataset/'   -dn   'nltcs'   -t 'parm' -depth 4 -input_dir '../output/mt/' -input_module 'nltcs_5' -output_dir '../output/cnr/'
 
 
 MAP inference examples:
     python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'cnxd' -depth 5 -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/cnxd/' -input_module 'nltcs_5' -output_dir '../map/cnxd/'
     python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'cnd' -depth 5 -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/cnd/' -input_module 'nltcs' -output_dir '../map/cnd/'
-    python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'rcn' -depth 4 -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/rcn/' -input_module 'nltcs_4' -output_dir '../map/rcn/'
+    python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'cnr' -depth 4 -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/rcn/' -input_module 'nltcs_4' -output_dir '../map/rcn/'
     python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'mt' -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/mt/' -input_module 'nltcs_5' -output_dir '../map/mt/'
     python main.py -p 'map' -dir   '../dataset/'   -dn   'nltcs'  -t 'bcnet' -e 0.2 -seq 0 -efile '../efile/nltcs_evid_20.txt' -input_dir '../output/bcnet/' -input_module 'nltcs' -output_dir '../map/bcnet/'
