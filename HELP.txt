@@ -6,7 +6,7 @@ The software contains implementations of six algorithms:
 (5) CNxDs: Cutset networks via compilation from MTs or BCNs and data (Read the paper in folder 'results')
 (6) CNRs: Randomly generated deep CN structures with parameters learned from BCNs or MTs.
 
-Results of our experimental study are presented in the folder 'results.'
+Results of our experimental study are presented in the folder 'results'.
 
 ----------------------------------------HELP----------------------------------------------
 -p                The program name
