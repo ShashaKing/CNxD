@@ -69,6 +69,7 @@ class Leaf_tree:
             
         return cond_cpt
     
+    # set the evidence, using log space
     def instantiation_log(self, e_value):
         
         log_cond_cpt = np.copy(self.log_cond_cpt)
